@@ -4,6 +4,31 @@ A lightweight, secure Web API proxy built with .NET Core. This service handles r
 
 ## Prerequisites
 
+## Phase 1: RapidAPI Setup (Required)
+
+Before running the application, you need to acquire a free API key to fetch the Amazon data. This key must be added to your .NET Core backend.
+
+1. **Get your Free API Key:** * Go to [RapidAPI.com](https://rapidapi.com/) and create a free account.
+   * Search for **"Real-Time Amazon Data"** or **"Amazon Data Scraper"**. Look for one with a generous "Basic" free tier (usually 50 to 500 requests per month).
+   * Subscribe to the free tier and copy your `x-rapidapi-key` and `x-rapidapi-host`.
+
+2. **Configure the .NET Backend:**
+   * Open the `.NET Core Backend` project.
+   * Open or create the `appsettings.json` file.
+   * Add your RapidAPI credentials and Amazon Affiliate tag:
+
+   ```json
+   {
+     "RapidApi": {
+       "Key": "YOUR_RAPIDAPI_KEY_HERE",
+       "Host": "YOUR_RAPIDAPI_HOST_HERE"
+     },
+     "Amazon": {
+       "AffiliateTag": "your-affiliate-tag-20"
+     }
+   }
+   
+
 * [.NET SDK](https://dotnet.microsoft.com/download) (Version 8.0 or newer)
 * Visual Studio, VS Code, or JetBrains Rider
 
